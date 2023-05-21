@@ -25,7 +25,7 @@ body{
     justify-content: center;
 }
 
-.container *{
+.container .form-div,.buses-div{
     margin: 0.5rem;
 }
 
@@ -37,9 +37,18 @@ body{
 }
 
 .buses-div{
+    box-sizing: border-box;
     background-color: var(--color-verde-claro);
     min-height:15vh;
     width: 40vw;
     border-radius: 20px;
-
+    padding: 1.5rem;
 }
+
+.bus{
+    height: 2.8rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color:var(--color-verde-oscuro);
+}
+
