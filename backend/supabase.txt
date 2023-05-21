@@ -1,0 +1,20 @@
+Usuario: federicopenaranda@gmail.com
+Pass: Stargate-2023
+
+
+DB Pass: TZXZxM7qMyOgHsEl
+
+
+Project Configuration
+URL: https://yfhouaceavabmgfghihe.supabase.co
+API Key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ
+JWT Secret: tQ8EZBfRg5cSqgghv12E86dZ9GGDj8nSVqvDgxghJcN9qk1zGpjksHqvHr+qBgjc0UZtAbCcTFCSeVEEJ9bHrA==
+
+
+JS:
+=======================
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://yfhouaceavabmgfghihe.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
