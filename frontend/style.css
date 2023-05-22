@@ -34,7 +34,7 @@ body{
 .form-div{
     background-color: var(--color-verde-claro);
     height: auto;
-    width: 40vw;
+    width: 40vw ;
     padding: 1.5rem;
     box-sizing: border-box;
     border-radius: 20px;
