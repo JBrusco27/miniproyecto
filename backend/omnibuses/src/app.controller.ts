@@ -1,12 +1,20 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
+import { SupabaseGuard } from './common/supabase';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) { }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
+    @UseGuards(SupabaseGuard)
+    @Get()
+    getHello(): any {
+        return this.appService.getOminbus();
+    }
+
+    @UseGuards(SupabaseGuard)
+    @Post()
+    createOmnibus(): any {
+        return this.appService.createOmnibus();
+    }
 }
