@@ -1,0 +1,135 @@
+:root{
+    --color-verde-oscuro:#425C5A;
+    --color-verde-claro:#A2BFBD;
+    --color-naranja:#ffb97c;
+    --color-naranja-claro:#ffcb9e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.container{
+    background-color: var(--color-verde-oscuro);
+    height:100%;
+    padding: 0 0 3rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .form-div,.buses-div{
+    margin: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.503);
+}
+
+.form-div{
+    background-color: var(--color-verde-claro);
+    height: auto;
+    width: 40vw ;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.buses-div{
+    box-sizing: border-box;
+    background-color: var(--color-verde-claro);
+    width: 40vw;
+    height: auto;
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+
+.input-div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center ;
+    margin-bottom: 1rem;
+}
+
+.input-label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input{
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-indent: 1rem;
+    text-transform: uppercase;
+    background-color: white;
+    color: var(--color-verde-oscuro);
+    outline: none;
+    border: none;
+    height: 2.8rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+label{
+    color: var(--color-verde-oscuro);
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+
+input[type=submit]{
+    border-radius: 50px;
+    background-color: var(--color-naranja);
+    text-indent: 0;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color:var(--color-naranja-claro);
+}   
+
+.bus{
+    padding: 1rem;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color:var(--color-verde-oscuro);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.5rem;
+}
+
+.bus p{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color:white;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.item-name{
+    color: rgb(213, 213, 213);
+    font-weight: 600;
+}
+
+img{
+    height: 4rem;
+    margin: 2rem;
+}
