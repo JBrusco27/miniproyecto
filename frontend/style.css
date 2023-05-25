@@ -12,11 +12,10 @@
 }
 
 body{
-    background-color: whitesmoke;
+    background-color: var(--color-verde-oscuro);
 }
 
 .container{
-    background-color: var(--color-verde-oscuro);
     height:100%;
     padding: 0 0 3rem 0;
     width: 100%;
@@ -32,7 +31,7 @@ body{
 }
 
 .form-div{
-    background-color: var(--color-verde-claro);
+    border: 2px var(--color-verde-claro) solid;
     height: auto;
     width: 40vw ;
     padding: 1.5rem;
@@ -46,11 +45,12 @@ form{
 }
 .buses-div{
     box-sizing: border-box;
-    background-color: var(--color-verde-claro);
-    width: 40vw;
+    background-color: var(--color-verde-oscuro);
+    border: 2px var(--color-verde-claro) solid;
+    min-width: 40vw;
     height: auto;
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 
@@ -70,59 +70,71 @@ form{
 }
 
 input{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     text-indent: 1rem;
     text-transform: uppercase;
-    background-color: white;
-    color: var(--color-verde-oscuro);
+    background-color: var(--color-verde-oscuro);
+    border-radius: 0px;
+    color: white;
     outline: none;
-    border: none;
-    height: 2.8rem;
+    height: 2.4rem;
     width: 100%;
-    border-radius: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #ffb97c 1px solid;
 }
 
 label{
-    color: var(--color-verde-oscuro);
+    color: var(--color-verde-claro);
     width: 100%;
     text-transform: uppercase;
     font-size: 0.9rem;
     padding: 0 1rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 input[type=submit]{
-    border-radius: 50px;
+    line-height: 0;
+    height: 3rem;
+    border-radius: 10px ;
+    border: none;
     background-color: var(--color-naranja);
     text-indent: 0;
     transition: all 0.2s ease-out;
     cursor: pointer;
+    background-color:#fd9d4a;
 }
 input[type=submit]:hover{
-    background-color:var(--color-naranja-claro);
+    background-color:#e99246;
 }   
 
 .bus{
-    padding: 1rem;
     height: auto;
-    margin: 0.5rem;
-    border-radius: 5px;
-    background-color:var(--color-verde-oscuro);
+    padding-bottom: 1rem;
+    margin-bottom:1rem;
+    border-bottom: 2px solid var(--color-naranja);
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 0.5rem;
+    gap: 0.5rem ;
 }
 
+
 .bus p{
+    background: rgba(255, 255, 255, 0.226);
+    border-radius: 5px;
+    padding: 0.5rem;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     color:white;
+    line-height: 1.3rem;
     text-align: center;
-    font-weight: 600;
-
+    font-weight: 100;
 }
+
+
 
 .item-name{
     color: rgb(213, 213, 213);
@@ -132,4 +144,28 @@ input[type=submit]:hover{
 img{
     height: 4rem;
     margin: 2rem;
+}
+
+.refresh{
+    border: none;
+    background-color: var(--color-naranja);
+    width: 40vw;
+    border-radius: 20px;
+    color: var(--color-verde-oscuro);
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px){
+    .form-div{
+        width: 90%;
+    }
+    .buses-div{
+        width: 90%;
+    }
+    .bus{
+        grid-template-columns: auto ;
+    }
+    .input-div{
+        flex-direction: column;
+    }
 }
