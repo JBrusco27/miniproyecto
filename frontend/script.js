@@ -1,32 +1,33 @@
 function newBus() {
-  const matricula = document.querySelector("#matricula").value;
-  const marca = document.querySelector("#marca").value;
-  const pasajeros = document.querySelector("#pasajeros").value;
-  const altura = document.querySelector("#altura").value;
-  const peso = document.querySelector("#peso").value;
-  const largo = document.querySelector("#largo").value;
-  const ejes = document.querySelector("#ejes").value;
-  const empresa = document.querySelector("#empresa").value;
+  event.preventDefault();
+  const omnibus_matricula = document.querySelector("#matricula").value;
+  const omnibus_marca = document.querySelector("#marca").value;
+  const omnibus_pasajeros = document.querySelector("#pasajeros").value;
+  const omnibus_altura = document.querySelector("#altura").value;
+  const omnibus_peso = document.querySelector("#peso").value;
+  const omnibus_largo = document.querySelector("#largo").value;
+  const omnibus_ejes = document.querySelector("#ejes").value;
+  const omnibus_empresa = document.querySelector("#empresa").value;
 
   const data = {
-    matricula,
-    marca,
-    pasajeros,
-    altura,
-    peso,
-    largo,
-    ejes,
-    empresa
+    omnibus_matricula,
+    omnibus_marca,
+    omnibus_pasajeros,
+    omnibus_altura,
+    omnibus_peso,
+    omnibus_largo,
+    omnibus_ejes,
+    omnibus_empresa
   };
-
-  // axios
-  //   .post("", data)
-  //   .then(function (response) {
-  //     console.log(response.data);
-  //   })
-  //   .catch(function (error) {
-  //     console.error(error);
-  //   });
+  console.log(data);
+  axios
+    .post("", data)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 }
 
   function createBus(){
