@@ -21,7 +21,7 @@ function newBus() {
   };
   console.log(data);
   axios
-    .post("", data)
+    .post("http://localhost:3000", data, { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
     .then(function (response) {
       console.log(response.data);
     })
@@ -33,9 +33,9 @@ function newBus() {
   function createBus(){
 
     axios
-    .get('https://jsonplaceholder.typicode.com/posts')
+    .get('http://localhost:3000', { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
     .then(response => {
-      response.data.forEach(element => {
+      response.data.data.forEach(element => {
         let userData = {
           omnibus_matricula: element.omnibus_matricula,
           omnibus_marca: element.omnibus_marca,
