@@ -37,20 +37,24 @@ function newBus() {
     .then(response => {
       response.data.forEach(element => {
         let userData = {
-          userIdData: element.userId, 
-          IdData: element.id,
-          titleData: element.title, 
-          bodyData: element.body
+          omnibus_matricula: element.omnibus_matricula,
+          omnibus_marca: element.omnibus_marca,
+          omnibus_pasajeros: element.omnibus_pasajeros,
+          omnibus_altura: element.omnibus_altura,
+          omnibus_peso: element.omnibus_peso,
+          omnibus_largo: element.omnibus_largo,
+          omnibus_ejes: element.omnibus_ejes,
+          omnibus_empresa: element.omnibus_empresa
         }
         const busProperties = [
-          { name: "matricula", value:userData.IdData },
-          { name: "marca", value:userData.userIdData },
-          { name: "pasajeros", value:userData.userIdData },
-          { name: "altura", value:userData.userIdData},
-          { name: "peso", value:userData.userIdData},
-          { name: "largo", value:userData.userIdData},
-          { name: "ejes", value:userData.userIdData},
-          { name: "empresa", value:userData.userIdData}
+          { name: "matricula", value:userData.omnibus_matricula },
+          { name: "marca", value:userData.omnibus_marca },
+          { name: "pasajeros", value:userData.omnibus_pasajeros },
+          { name: "altura", value:userData.omnibus_altura},
+          { name: "peso", value:userData.omnibus_peso},
+          { name: "largo", value:userData.omnibus_largo},
+          { name: "ejes", value:userData.omnibus_ejes},
+          { name: "empresa", value:userData.omnibus_empresa}
         ];
   
         
