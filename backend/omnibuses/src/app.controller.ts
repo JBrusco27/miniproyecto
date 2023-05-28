@@ -1,6 +1,7 @@
-import { Controller, Get, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
 import { SupabaseGuard } from './common/supabase';
+import { CreateOmnibusDto } from './dto/omnibus.dto';
 
 @Controller()
 export class AppController {
@@ -14,7 +15,9 @@ export class AppController {
 
     @UseGuards(SupabaseGuard)
     @Post()
-    createOmnibus(): any {
-        return this.appService.createOmnibus();
+    createOmnibus(
+		@Body() dto: CreateOmnibusDto,
+    ): any {
+        return this.appService.createOmnibus(dto);
     }
 }
