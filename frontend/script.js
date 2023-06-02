@@ -8,7 +8,7 @@ function newBus() {
   const omnibus_largo = document.querySelector("#largo").value;
   const omnibus_ejes = document.querySelector("#ejes").value;
   const omnibus_empresa = document.querySelector("#empresa").value;
-
+  
   const data = {
     omnibus_matricula,
     omnibus_marca,
@@ -21,13 +21,14 @@ function newBus() {
   };
   console.log(data);
   axios
-    .post("http://localhost:3000", data, { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+  .post("http://localhost:3000", data, { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
+  setTimeout(() => refresh(), 1000);
 }
 
   function createBus(){
@@ -89,6 +90,7 @@ function newBus() {
 
   createBus();
   function refresh() {
+    console.log("Refresh...");
     const busDivs = document.querySelectorAll(".buses-div .bus");
   
     busDivs.forEach(busDiv => {
