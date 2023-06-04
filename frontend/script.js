@@ -21,20 +21,19 @@ function newBus() {
   };
   console.log(data);
   axios
-  .post("http://localhost:3000", data, { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
-  setTimeout(() => refresh(), 1000);
+    .post("https://grieving-friction-production.up.railway.app", data, { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 }
 
   function createBus(){
 
     axios
-    .get('http://localhost:3000', { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
+    .get('https://grieving-friction-production.up.railway.app', { headers: { 'Authentication': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaG91YWNlYXZhYm1nZmdoaWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3MDcyMzAsImV4cCI6MjAwMDI4MzIzMH0.9ymp6avHtt28P15TWi9_ZbJOHDNsR3I-Y8dk_M3_xVQ' } })
     .then(response => {
       response.data.data.forEach(element => {
         let userData = {

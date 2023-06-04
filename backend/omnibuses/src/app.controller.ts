@@ -7,10 +7,9 @@ import { CreateOmnibusDto } from './dto/omnibus.dto';
 export class AppController {
     constructor(private readonly appService: AppService) { }
 
-    @UseGuards(SupabaseGuard)
     @Get()
     getHello(): any {
-        return this.appService.getOminbus();
+        return 'ENDPOINT DE PRUEBA!!';
     }
 
     @UseGuards(SupabaseGuard)
@@ -20,4 +19,10 @@ export class AppController {
     ): any {
         return this.appService.createOmnibus(dto);
     }
+
+    @Get('listado')
+    getListado(): any {
+        return this.appService.getOminbus();
+    }
+
 }
