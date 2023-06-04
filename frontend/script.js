@@ -8,7 +8,7 @@ function newBus() {
   const omnibus_largo = document.querySelector("#largo").value;
   const omnibus_ejes = document.querySelector("#ejes").value;
   const omnibus_empresa = document.querySelector("#empresa").value;
-
+  
   const data = {
     omnibus_matricula,
     omnibus_marca,
@@ -89,6 +89,7 @@ function newBus() {
 
   createBus();
   function refresh() {
+    console.log("Refresh...");
     const busDivs = document.querySelectorAll(".buses-div .bus");
   
     busDivs.forEach(busDiv => {
